@@ -37,6 +37,24 @@ namespace NFP_MVAA.Data
             }
         }
 
+
+        static public bool UserEntry(string name, string password)
+        {
+            ConnectDate();
+            string sqlExpression = $"SELECT * FROM [NFP].[dbo].[Users] WHERE Name='{name}' And  Password='{password}'";
+
+            SqlCommand command = new SqlCommand(sqlExpression, connection);
+
+            int countUser=Convert.ToInt32(command.ExecuteScalar());
+            connection.Close();
+
+            if(countUser==0)
+                return false;
+            else
+                return true;
+        }
+
+
         static public string SearchBall(string result)
         {
             ConnectDate();
