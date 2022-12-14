@@ -2,12 +2,12 @@
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Input;
-using TestWPF.Data;
-using TestWPF.Infastructure;
-using TestWPF.ViewModes.Base;
-using TestWPF.Views.Pages;
+using NFP_MVAA.Data;
+using NFP_MVAA.Infastructure;
+using NFP_MVAA.ViewModes.Base;
+using NFP_MVAA.Views.Pages;
 
-namespace TestWPF.ViewModes
+namespace NFP_MVAA.ViewModes
 {
     public class MainWindowViewModel:ViewModes.Base.ViewModelBase
     {

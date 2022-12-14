@@ -1,10 +1,10 @@
-﻿<Page x:Class="TestWPF.Views.Pages.SettingView"
+﻿<Page x:Class="NFP_MVAA.Views.Pages.SettingView"
       xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
       xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
-      xmlns:local="clr-namespace:TestWPF.Views.Pages"
-       xmlns:vm="clr-namespace:TestWPF.ViewModes"
+      xmlns:local="clr-namespace:NFP_MVAA.Views.Pages"
+       xmlns:vm="clr-namespace:NFP_MVAA.ViewModes"
       mc:Ignorable="d" 
       d:DesignHeight="700" d:DesignWidth="1000"
       Title="SettingView" Background="Transparent">

@@ -2,9 +2,9 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace TestWPF.ViewModes
+namespace NFP_MVAA.ViewModes
 {
-    internal class MethodologyViewModel:ViewModes.Base.ViewModelBase
+    public class MethodologyViewModel:ViewModes.Base.ViewModelBase
     {
     }
 }

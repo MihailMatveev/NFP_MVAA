@@ -12,7 +12,7 @@ using System.Windows.Navigation;
 using System.Windows.Shapes;
 using System.Windows.Threading;
 
-namespace TestWPF.Views.Pages
+namespace NFP_MVAA.Views.Pages
 {
     /// <summary>
     /// Логика взаимодействия для MethodologyView.xaml

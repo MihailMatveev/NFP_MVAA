@@ -1,9 +1,9 @@
-﻿using System;
+﻿using NFP_MVAA.Infastructure.Base;
+using System;
 using System.Collections.Generic;
 using System.Text;
-using TestWPF.Infastructure.Base;
 
-namespace TestWPF.Infastructure
+namespace NFP_MVAA.Infastructure
 {
     public class LamdaCommand:Command
     {

@@ -10,7 +10,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 
-namespace TestWPF.Views.Windows
+namespace NFP_MVAA.Views.Windows
 {
     /// <summary>
     /// Логика взаимодействия для CompletionRegistUserView.xaml

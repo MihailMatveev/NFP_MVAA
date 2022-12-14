@@ -3,9 +3,9 @@ using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Windows;
-using TestWPF.Models;
+using NFP_MVAA.Models;
 
-namespace TestWPF.Data
+namespace NFP_MVAA.Data
 {
 
     public static class DateWork

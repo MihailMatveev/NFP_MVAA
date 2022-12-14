@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace TestWPF.Models
+namespace NFP_MVAA.Models
 {
     public class BallResultExercisesEndurance
     {

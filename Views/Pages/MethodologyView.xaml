@@ -1,10 +1,10 @@
-﻿<Page x:Class="TestWPF.Views.Pages.MethodologyView"
+﻿<Page x:Class="NFP_MVAA.Views.Pages.MethodologyView"
       xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
       xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
-      xmlns:local="clr-namespace:TestWPF.Views.Pages"
-      xmlns:vm="clr-namespace:TestWPF.ViewModes"
+      xmlns:local="namespace:NFP_MVAA.Views.Pages" 
+      xmlns:vm="clr-namespace:NFP_MVAA.ViewModes"
       mc:Ignorable="d" 
       Height="700" Width="1100"
       Background="Transparent"
@@ -14,6 +14,14 @@
         <vm:MethodologyViewModel/>
     </Page.DataContext>
 
+    <Page.Resources>
+        <Style TargetType="{x:Type DataGrid}">
+            <Setter Property="Background" Value="#79CBEE"/>
+        </Style>
+        <Style TargetType="{x:Type Grid}">
+            <Setter Property="Background" Value="#79CBEE"/>
+        </Style>
+    </Page.Resources>
 
     <TabControl>
 
@@ -22,29 +30,31 @@
             <TabControl >
 
                 <TabItem Header="Гимнастика">
-
+                    <Grid>
+                        <MediaElement Source="/Logo/123.mp4" LoadedBehavior="Play"/>
+                    </Grid>
                 </TabItem>
 
                 <TabItem Header="Легкая атлетика">
-                    <DataGrid Background="#79CBEE">
-                        
+                    <DataGrid >
+
                     </DataGrid>
                 </TabItem>
 
                 <TabItem Header="Рукопашный бой">
-                    <DataGrid Background="#79CBEE">
+                    <DataGrid >
                         
                     </DataGrid>
                 </TabItem>
 
                 <TabItem Header="Плавание">
-                    <DataGrid Background="#79CBEE">
+                    <DataGrid >
 
                     </DataGrid>
                 </TabItem>
 
                 <TabItem Header="Спортивные игры">
-                    <DataGrid Background="#79CBEE">
+                    <DataGrid >
 
                     </DataGrid>
                 </TabItem>

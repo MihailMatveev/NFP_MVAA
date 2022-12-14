@@ -11,7 +11,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace TestWPF.Views.Pages
+namespace NFP_MVAA.Views.Pages
 {
     /// <summary>
     /// Логика взаимодействия для SettingView.xaml

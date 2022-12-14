@@ -13,7 +13,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace TestWPF.Views.Windows
+namespace NFP_MVAA.Views.Windows
 {
     /// <summary>
     /// Interaction logic for MainWindow.xaml

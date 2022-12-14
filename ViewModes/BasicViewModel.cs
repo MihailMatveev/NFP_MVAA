@@ -3,11 +3,11 @@ using System.Collections.Generic;
 using System.Text;
 using System.Windows;
 using System.Windows.Input;
-using TestWPF.Data;
-using TestWPF.Infastructure;
-using TestWPF.Models;
+using NFP_MVAA.Data;
+using NFP_MVAA.Infastructure;
+using NFP_MVAA.Models;
 
-namespace TestWPF.ViewModes
+namespace NFP_MVAA.ViewModes
 {
     public class BasicViewModel:ViewModes.Base.ViewModelBase
     {

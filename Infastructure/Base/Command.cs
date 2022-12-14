@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Windows.Input;
 
-namespace TestWPF.Infastructure.Base
+namespace NFP_MVAA.Infastructure.Base
 {
     public abstract class Command : ICommand
     {

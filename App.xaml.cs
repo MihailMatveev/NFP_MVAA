@@ -13,5 +13,6 @@ namespace NFP_MVAA
     /// </summary>
     public partial class App : Application
     {
+
     }
 }

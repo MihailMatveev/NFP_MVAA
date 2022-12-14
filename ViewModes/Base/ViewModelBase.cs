@@ -4,9 +4,9 @@ using System.ComponentModel;
 using System.Runtime.CompilerServices;
 using System.Text;
 using System.Windows.Input;
-using TestWPF.Infastructure;
+using NFP_MVAA.Infastructure;
 
-namespace TestWPF.ViewModes.Base
+namespace NFP_MVAA.ViewModes.Base
 {
     public abstract class ViewModelBase : INotifyPropertyChanged
     {

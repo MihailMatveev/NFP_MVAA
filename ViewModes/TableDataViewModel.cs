@@ -1,10 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
-using TestWPF.Data;
-using TestWPF.Models;
+using NFP_MVAA.Data;
+using NFP_MVAA.Models;
 
-namespace TestWPF.ViewModes
+namespace NFP_MVAA.ViewModes
 {
     public class TableDataViewModel:ViewModes.Base.ViewModelBase
     {
