@@ -202,6 +202,7 @@
     </ApplicationDefinition>
     <Compile Include="ViewModes\Base\ViewModelBase.cs" />
     <Compile Include="ViewModes\BasicViewModel.cs" />
+    <Compile Include="ViewModes\Entry\RegisterUserViewModel.cs" />
     <Compile Include="ViewModes\MainWindowViewModel.cs" />
     <Compile Include="ViewModes\MethodologyViewModel.cs" />
     <Compile Include="ViewModes\SettingVIewModel.cs" />

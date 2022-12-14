@@ -4,6 +4,7 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:NFP_MVAA.Views.Windows"
+        xmlns:vm="clr-namespace:NFP_MVAA.ViewModes.Entry"
         xmlns:fa="http://schemas.awesome.incremented/wpf/xaml/fontawesome.sharp"
         mc:Ignorable="d"
         Title="MainWindow" Height="400" Width="700"
@@ -11,7 +12,10 @@
         WindowStyle="None"
         Background="Transparent"
         AllowsTransparency="True">
-
+    
+    <Window.DataContext>
+        <vm:RegisterUserViewModel/>
+    </Window.DataContext>
   
     
     <Border CornerRadius="10"
@@ -71,7 +75,7 @@
                                 MouseLeftButtonDown="pnlControlBar_MouseLeftButtonDown">
 
                         <Button x:Name="btnExit"
-                                Click="btnClouse_Click"
+                                Command="{Binding CloseApplicationCommand}"
                                 Cursor="Hand" BorderBrush="Transparent">
                             <Button.Background>
                                 <LinearGradientBrush StartPoint="1,1" EndPoint="0,0">
@@ -85,6 +89,7 @@
                         
                         <Button x:Name="btnMinimize"
                                 Click="btnMinimize_Click"
+                                CommandParameter="{}"
                                 Cursor="Hand"
                                 BorderBrush="Transparent">
                             <Button.Background>
