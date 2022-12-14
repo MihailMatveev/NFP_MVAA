@@ -31,5 +31,9 @@ namespace NFP_MVAA.Views.Windows
         {
             this.WindowState = WindowState.Minimized;
         }
+        private void btnClouse_Click(object sender, RoutedEventArgs e)
+        {
+            Application.Current.Shutdown();
+        }
     }
 }

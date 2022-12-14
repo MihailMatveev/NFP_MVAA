@@ -7,11 +7,13 @@
         xmlns:fa="http://schemas.awesome.incremented/wpf/xaml/fontawesome.sharp"
         mc:Ignorable="d"
         Title="MainWindow" Height="400" Width="700"
-        WindowStartupLocation="CenterOwner"
+        WindowStartupLocation="CenterScreen"
         WindowStyle="None"
         Background="Transparent"
         AllowsTransparency="True">
 
+  
+    
     <Border CornerRadius="10"
             BorderThickness="1">
         <Border.BorderBrush>
@@ -67,17 +69,30 @@
                                 Background="Transparent"
                                 Margin="0,0,5,0"
                                 MouseLeftButtonDown="pnlControlBar_MouseLeftButtonDown">
+
                         <Button x:Name="btnExit"
-                                Command="{Binding CloseApplicationCommand}"
-                                Cursor="Hand"
-                                Style="{StaticResource Exit}">
+                                Click="btnClouse_Click"
+                                Cursor="Hand" BorderBrush="Transparent">
+                            <Button.Background>
+                                <LinearGradientBrush StartPoint="1,1" EndPoint="0,0">
+                                    <GradientStop Color="#5500ff"/>
+                                    <GradientStop Color="#0000CD"/>
+                                </LinearGradientBrush>
+                            </Button.Background>
                             <fa:IconImage Icon="Xmark" Style="{StaticResource CloseButtonIcon}"/>
                         </Button>
-
+                        
+                        
                         <Button x:Name="btnMinimize"
                                 Click="btnMinimize_Click"
                                 Cursor="Hand"
-                                Style="{StaticResource Exit}">
+                                BorderBrush="Transparent">
+                            <Button.Background>
+                                <LinearGradientBrush StartPoint="1,1" EndPoint="0,0">
+                                    <GradientStop Color="#5500ff"/>
+                                    <GradientStop Color="#0000CD"/>
+                                </LinearGradientBrush>
+                            </Button.Background>
                             <fa:IconImage Icon="WindowMinimize" Width="12" Style="{StaticResource CloseButtonIcon}"/>
                         </Button>
                     </StackPanel>
@@ -87,12 +102,12 @@
                             <Image Source="/Logo/UserProfile.png" Height="200"/>
                         </StackPanel>
                         <StackPanel Orientation="Vertical" DockPanel.Dock="Right">
-                            <TextBox Margin="0,130,0,0" Background="#4169E1" Text="Имя пользователя" TextAlignment="Center" Width="200"/>
+                            <TextBox Margin="0,130,0,10" Background="#4169E1" Text="Имя пользователя" TextAlignment="Center" Width="200"/>
                             <TextBox  Background="#4169E1" Text="Пароль" TextAlignment="Center" Width="200"/>
 
-                            <Button Content="Войти"  Margin="8,10,40,0" Background="#4169E1" Click="Button_Click"/>
+                            <Button Content="Войти"  Margin="25,10,25,0" Background="#4169E1" Click="Button_Entry_Click"/>
 
-                            <Button Background="Transparent" BorderBrush="Transparent" Margin="8,10,40,0">
+                            <Button Background="Transparent" BorderBrush="Transparent" Margin="25,10,25,0" Cursor="Hand" Click="Button_Completion_Click">
                                 <TextBlock Text="Зарегистрироваться"/>
                             </Button>
                         </StackPanel>

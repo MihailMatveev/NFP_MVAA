@@ -7,7 +7,7 @@
         xmlns:local="clr-namespace:NFP_MVAA.Views.Windows"
         mc:Ignorable="d"
         Title="MainWindow" Height="400" Width="700"
-        WindowStartupLocation="CenterOwner"
+        WindowStartupLocation="CenterScreen"
         WindowStyle="None"
         Background="Transparent"
         AllowsTransparency="True">
@@ -67,27 +67,44 @@
                                 Background="Transparent"
                                 Margin="0,0,5,0"
                                 MouseLeftButtonDown="pnlControlBar_MouseLeftButtonDown">
+
+                      
                         <Button x:Name="btnExit"
-                                Command="{Binding CloseApplicationCommand}"
-                                Cursor="Hand"
-                                Style="{StaticResource Exit}">
+                                Click="btnClouse_Click"
+                                Cursor="Hand" BorderBrush="Transparent">
+                            <Button.Background>
+                                <LinearGradientBrush StartPoint="1,1" EndPoint="0,0">
+                                    <GradientStop Color="#5500ff"/>
+                                    <GradientStop Color="#0000CD"/>
+                                </LinearGradientBrush>
+                            </Button.Background>
                             <fa:IconImage Icon="Xmark" Style="{StaticResource CloseButtonIcon}"/>
                         </Button>
+
 
                         <Button x:Name="btnMinimize"
                                 Click="btnMinimize_Click"
                                 Cursor="Hand"
-                                Style="{StaticResource Exit}">
+                                BorderBrush="Transparent">
+                            <Button.Background>
+                                <LinearGradientBrush StartPoint="1,1" EndPoint="0,0">
+                                    <GradientStop Color="#5500ff"/>
+                                    <GradientStop Color="#0000CD"/>
+                                </LinearGradientBrush>
+                            </Button.Background>
                             <fa:IconImage Icon="WindowMinimize" Width="12" Style="{StaticResource CloseButtonIcon}"/>
                         </Button>
                     </StackPanel>
+
 
                     <DockPanel Grid.Row="1">
                         <StackPanel DockPanel.Dock="Left">
                             <Label Margin="0,20,0,0" Content="Регистрация" Foreground="White" HorizontalAlignment="Center" HorizontalContentAlignment="Center" FontSize="27"/>
                             <TextBox Text="Имя" Foreground="White" TextAlignment="Center" Width="200" Background="#4169E1" Margin="0,80,0,0"/>
                             <TextBox Text="Пароль" Foreground="White" TextAlignment="Center" Width="200" Background="#4169E1" Margin="0,10,0,0"/>
-                            <TextBox Text="@email.ru" Foreground="White" TextAlignment="Center" Width="200" Background="#4169E1" Margin="0,10,0,0"/>
+                            <Button Content="Зарегистрироваться"  Margin="25,10,25,0" Background="#4169E1" Width="200"/>
+
+                            <TextBlock Margin="20 20" Height="40" Text="Такой пользователь уже есть в системе" Foreground="Red" FontSize="20" TextAlignment="Center"/>
                         </StackPanel>
                     </DockPanel>
                 </Grid>

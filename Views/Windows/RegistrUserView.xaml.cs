@@ -31,11 +31,24 @@ namespace NFP_MVAA.Views.Windows
             this.WindowState = WindowState.Minimized;
         }
 
-        private void Button_Click(object sender, RoutedEventArgs e)
+        private void Button_Entry_Click(object sender, RoutedEventArgs e)
         {
             MainWindow mainWindow = new MainWindow();
             mainWindow.Show();
             this.Close();
+        }
+
+
+        private void Button_Completion_Click(object sender, RoutedEventArgs e)
+        {
+            CompletionRegistUserView completion = new CompletionRegistUserView();
+            completion.Show();
+            this.Close();
+        }
+
+        private void btnClouse_Click(object sender, RoutedEventArgs e)
+        {
+            Application.Current.Shutdown();
         }
     }
 }
