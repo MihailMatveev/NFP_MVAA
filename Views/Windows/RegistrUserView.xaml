@@ -107,7 +107,18 @@
                             <Image Source="/Logo/UserProfile.png" Height="200"/>
                         </StackPanel>
                         <StackPanel Orientation="Vertical" DockPanel.Dock="Right">
-                            <TextBox Margin="0,130,0,10" Background="#4169E1" Text="Имя пользователя" TextAlignment="Center" Width="200"/>
+
+
+                            <TextBox ToolTip="{Binding ErrorMessege, UpdateSourceTrigger=PropertyChanged}"
+                                     Text="{Binding UserName, UpdateSourceTrigger=PropertyChanged,ValidatesOnDataErrors=True}" 
+                                     Margin="0,130,0,10" 
+                                     Background="#4169E1" 
+                                     TextAlignment="Center" 
+                                     Width="200">
+                                
+                            </TextBox>
+
+
                             <TextBox  Background="#4169E1" Text="Пароль" TextAlignment="Center" Width="200"/>
 
                             <Button Content="Войти"  Margin="25,10,25,0" Background="#4169E1" Click="Button_Entry_Click"/>
