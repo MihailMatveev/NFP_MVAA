@@ -1,0 +1,106 @@
+﻿<Page x:Class="TestWPF.Views.Pages.SettingView"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:TestWPF.Views.Pages"
+       xmlns:vm="clr-namespace:TestWPF.ViewModes"
+      mc:Ignorable="d" 
+      d:DesignHeight="700" d:DesignWidth="1000"
+      Title="SettingView" Background="Transparent">
+
+    <Page.DataContext>
+        <vm:SettingVIewModel/>
+    </Page.DataContext>
+    
+    <Border  BorderThickness="1">
+        <Border.Background>
+            <LinearGradientBrush StartPoint="1,1" EndPoint="0,0">
+                <GradientStop Color="#79CBEE"/>
+            </LinearGradientBrush>
+        </Border.Background>
+        
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="300"/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="40"/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+
+            <Border Grid.RowSpan="2" Grid.Row="1"
+                    Background="WhiteSmoke" Opacity="0.8" Margin="10"
+                    CornerRadius="30">
+            </Border>
+
+            <Border Grid.RowSpan="2" Grid.Row="1" Margin="10">
+                <Border.Background>
+                    <ImageBrush ImageSource="/Logo/UserProfile.png"/>
+                </Border.Background>
+            </Border>
+
+
+            <Border Grid.Column="1" Grid.RowSpan="3"
+                    Grid.Row="1" Margin="14"
+                     Background="WhiteSmoke" Opacity="0.7">
+
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="240"/>
+                        <ColumnDefinition/>
+                    </Grid.ColumnDefinitions>
+
+                    <StackPanel Margin="10">
+                        <TextBlock Text="Имя" FontSize="25" Margin="10 15 0 10" TextAlignment="Right"/>
+                        <TextBlock Text="Фамилия" FontSize="25" Margin="10 20 0 10" TextAlignment="Right"/>
+                        <TextBlock Text="Категория" FontSize="25" Margin="10 20 0 10" TextAlignment="Right"/>
+                        <TextBlock Text="Дата рождения" FontSize="25" Margin="10 20 0 10" TextAlignment="Right"/>
+                        <TextBlock Text="Изменить пароль" FontSize="25" Margin="10 20 0 10" TextAlignment="Right"/>
+                        <TextBlock Text="Email" FontSize="25" Margin="10 15 0 10" TextAlignment="Right"/>
+                    </StackPanel>
+
+                    <StackPanel Grid.Column="1" Margin="10">
+                        
+                        <TextBox Width="400" Background="LightBlue" 
+                                 Opacity="0.8" TextAlignment="Left" 
+                                 FontSize="25" Foreground="Black" Margin="10"/>
+                        <TextBox Width="400" Background="LightBlue" 
+                                 Opacity="0.8" TextAlignment="Left" 
+                                 FontSize="25" Foreground="Black" Margin="10"/>
+                        
+                        <ComboBox Width="400" Background="LightBlue" 
+                                 Opacity="0.8" ItemsSource="{Binding Path=Category}"
+                                 FontSize="25" Foreground="Black" Margin="10"
+                                  SelectedIndex="{Binding SelectedFCategory}">
+                            <ComboBox.ItemTemplate>
+                                <DataTemplate>
+                                    <TextBlock Text="{Binding Name}" FontSize="13"/>
+                                </DataTemplate>
+                            </ComboBox.ItemTemplate>
+                        </ComboBox>
+
+                        
+                        <DatePicker Width="400" Background="LightBlue" 
+                                 Opacity="0.8" 
+                                 FontSize="25" Foreground="Black" Margin="10"/>
+                        
+                        <TextBox Width="400" Background="LightBlue" 
+                                 Opacity="0.8" TextAlignment="Left" 
+                                 FontSize="25" Foreground="Black" Margin="10"/>
+                        <TextBox Width="400" Background="LightBlue" 
+                                 Opacity="0.8" TextAlignment="Left" 
+                                 FontSize="25" Foreground="Black" Margin="10"/>
+
+                    </StackPanel>
+                </Grid>
+                
+                
+            </Border>
+        </Grid>
+    </Border>
+</Page>

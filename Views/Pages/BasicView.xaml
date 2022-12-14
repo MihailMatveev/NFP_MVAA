@@ -1,0 +1,111 @@
+﻿<Page x:Class="TestWPF.Views.Pages.BasicView"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:TestWPF.Views.Pages"
+      xmlns:vm="clr-namespace:TestWPF.ViewModes"
+      mc:Ignorable="d"
+      Height="500" Width="1000"
+      Background="Transparent">
+
+    
+    <Page.DataContext>
+        <vm:BasicViewModel/>
+    </Page.DataContext>
+
+    
+    
+    <Border CornerRadius="10"
+            BorderThickness="1">
+        <Border.Background>
+            <LinearGradientBrush StartPoint="1,1" EndPoint="0,0">
+                <GradientStop Color="#79CBEE"/>
+            </LinearGradientBrush>
+        </Border.Background>
+
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="30"/>
+                <RowDefinition Height="7*"/>
+                <RowDefinition Height="1*"/>
+                <RowDefinition Height="2*"/>
+            </Grid.RowDefinitions>
+
+            <Border Grid.Row="1" Background="White" Margin="10" CornerRadius="80">
+                <Border.Effect>
+                    <DropShadowEffect BlurRadius="60"/>
+                </Border.Effect>
+                <StackPanel Margin="0 9">
+                    <Image Source="/Logo/Force.png" Height="120"/>
+                    <ComboBox x:Name="ForceCmb" Margin="0,10,0,0" Width="300" Height="50" VerticalAlignment="Center"
+                              FontSize="10" SelectedIndex="{Binding SelectedForce}" ItemsSource="{Binding Path=Force}">
+                        <ComboBox.ItemTemplate>
+                            <DataTemplate>
+                                <TextBlock TextAlignment="Center" Text="{Binding Name}" FontSize="15"/>
+                            </DataTemplate>
+                        </ComboBox.ItemTemplate>
+
+                    </ComboBox>
+                    <TextBox Text="{Binding Path=Force_result}" FontSize="20" Margin="0,10,0,0"  Width="100"  TextAlignment="Center"/>
+                </StackPanel>
+            </Border>
+
+            <Border Grid.Row="1" Grid.Column="1" Background="White" Margin="10" CornerRadius="80">
+                <Border.Effect>
+                    <DropShadowEffect BlurRadius="60"/>
+                </Border.Effect>
+
+                <StackPanel Margin="0 9">
+                    <Image Source="/Logo/Speed.png" Height="120"/>
+
+                    <ComboBox x:Name="SpeedCmb" Margin="0,10,0,0" Width="300" Height="50" VerticalAlignment="Center"
+                              FontSize="10" SelectedIndex="{Binding SelectedSpeed}" ItemsSource="{Binding Path=Speed}">
+                        <ComboBox.ItemTemplate>
+                            <DataTemplate>
+                                <TextBlock TextAlignment="Center" Text="{Binding Name}" FontSize="15"/>
+                            </DataTemplate>
+                        </ComboBox.ItemTemplate>
+                    </ComboBox>
+                    <TextBox Text="{Binding Path=Speed_result}" FontSize="20" Margin="0,10,0,0"  Width="100"  TextAlignment="Center"/>
+                </StackPanel>
+            </Border>
+            
+            <Border Grid.Row="1" Grid.Column="2" Background="White" Margin="10" CornerRadius="80">
+                <Border.Effect>
+                    <DropShadowEffect BlurRadius="60"/>
+                </Border.Effect>
+
+                <StackPanel Margin="0 9">
+                    <Image Source="/Logo/Endurance.png" Height="120"/>
+                    <ComboBox x:Name="EnduranceCmb" Margin="0,10,0,0" Width="300" Height="50" VerticalAlignment="Center"
+                              FontSize="10" SelectedIndex="{Binding SelectedEndurance}" ItemsSource="{Binding Path=Endurance}">
+                        <ComboBox.ItemTemplate>
+                            <DataTemplate>
+                                <TextBlock TextAlignment="Center" Text="{Binding Name}" FontSize="15"/>
+                            </DataTemplate>
+                        </ComboBox.ItemTemplate>
+                    </ComboBox>
+                    <TextBox Text="{Binding Path=Endurance_result}" FontSize="20" Margin="0,10,0,0"  Width="100"  TextAlignment="Center"/>
+                </StackPanel>
+            </Border>
+
+            <Label Grid.Row="2" Content="{Binding Path=Force_Ball}" VerticalContentAlignment="Center"
+                   HorizontalContentAlignment="Center" FontSize="30"/>
+            <Label Grid.Row="2" Grid.Column="1" Content="{Binding Path=Speed_Ball}" VerticalContentAlignment="Center"
+                   HorizontalContentAlignment="Center" FontSize="30"/>
+            <Label Grid.Row="2" Grid.Column="2" Content="{Binding Path=Endurance_Ball}" VerticalContentAlignment="Center"
+                   HorizontalContentAlignment="Center" FontSize="30"/>
+
+            <Label Grid.Row="3" Grid.Column="1" Content="{Binding Path=Sum_Ball}" VerticalContentAlignment="Center"
+                   HorizontalContentAlignment="Center" FontSize="75"/>
+      
+        </Grid>
+
+    </Border>
+</Page>

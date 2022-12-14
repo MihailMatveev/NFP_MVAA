@@ -1,0 +1,102 @@
+﻿<Page x:Class="TestWPF.Views.Pages.TableDataView"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:TestWPF.Views.Pages"
+      xmlns:vm="clr-namespace:TestWPF.ViewModes"
+      xmlns:mod="clr-namespace:TestWPF.Models"
+      mc:Ignorable="d" 
+      Height="627" Width="1100"
+      Background="Transparent"
+      Title="TableDataView">
+
+    <Page.DataContext>
+        <vm:TableDataViewModel/>
+    </Page.DataContext>
+
+    <Page.Resources>
+        <Style TargetType="DataGridCell">
+            <Setter Property="HorizontalAlignment" Value="Center" />
+            <Setter Property="FontWeight" Value="Bold" />
+        </Style>
+    </Page.Resources>
+
+    <TabControl>
+        
+        <TabItem Header="Начисление баллов">
+
+            <TabControl >
+                <TabItem Header="Сила">
+                    <DataGrid Background="#79CBEE" ItemsSource="{Binding Path=BallResultForce}" IsReadOnly="True" AutoGenerateColumns="False" FrozenColumnCount="1">
+                        <DataGrid.Columns>
+                            <DataGridTextColumn Header="Баллы" Binding="{Binding Path=Ball}"/>
+                            <DataGridTextColumn Header="Подтягивание на перекладине" Binding="{Binding Path=Result_4}"/>
+                            <DataGridTextColumn Header="Подъем переворотом на перекладине" Binding="{Binding Path=Result_6}"/>
+                            <DataGridTextColumn Header="Сгибание и разгибание рук в упоре лежа" Binding="{Binding Path=Result_1}"/>
+                            <DataGridTextColumn Header="Наклоны туловища вперед" Binding="{Binding Path=Result_2}"/>
+                            <DataGridTextColumn Header="Поднимание ног к перекладине" Binding="{Binding Path=Result_5}"/>
+                            <DataGridTextColumn Header="Подъем силой на перкладине" Binding="{Binding Path=Result_7}"/>
+                            <DataGridTextColumn Header="Жим штанги лежа до 70 кг" Binding="{Binding Path=Result_8_1}"/>
+                            <DataGridTextColumn Header="Жим штанги лежа свышу 70 кг" Binding="{Binding Path=Result_8_2}"/>
+                            <DataGridTextColumn Header="Сгибание и разгибание рук в упоре на брусьях" Binding="{Binding Path=Result_9}"/>
+                            <DataGridTextColumn Header="Угол в упоре на брусьях" Binding="{Binding Path=Result_10}"/>
+                            <DataGridTextColumn Header="Рывок гири, вес 24 кг до 70 кг" Binding="{Binding Path=Result_11_1}"/>
+                            <DataGridTextColumn Header="Рывок гири, вес 24 кг свыше 70 кг" Binding="{Binding Path=Result_11_2}"/>
+                            <DataGridTextColumn Header="Толчок двух гирь,вес 24 кг до 70 кг" Binding="{Binding Path=Result_12_1}"/>
+                            <DataGridTextColumn Header="Толчок двух гирь,вес 24 кг свыше 70 кг" Binding="{Binding Path=Result_12_2}"/>
+                            <DataGridTextColumn Header="Толчок двух гирь по длинному циклу, вес 24 кг до 70 кг" Binding="{Binding Path=Result_13_1}"/>
+                            <DataGridTextColumn Header="Толчок двух гирь по длинному циклу, вес 24 кг свыше 70 кг" Binding="{Binding Path=Result_13_2}"/>
+                        </DataGrid.Columns>
+                    </DataGrid>
+
+                </TabItem>
+
+                <TabItem Header="Быстрота">
+                    <DataGrid Background="#79CBEE" ItemsSource="{Binding Path=BallResultSpeed}" IsReadOnly="True" AutoGenerateColumns="False" FrozenColumnCount="1">
+                        <DataGrid.Columns>
+                            <DataGridTextColumn Header="Баллы" Binding="{Binding Path=Ball}"/>
+                            <DataGridTextColumn Header="Бег на 60 м" Binding="{Binding Path=Result_40}"/>
+                            <DataGridTextColumn Header="Бег на 100 м" Binding="{Binding Path=Result_41}"/>
+                            <DataGridTextColumn Header="Челночный бег 10 х 10 м" Binding="{Binding Path=Result_42}"/>
+                            <DataGridTextColumn Header="Бег на 400 м" Binding="{Binding Path=Result_43}"/>
+                            <DataGridTextColumn Header="Челночный бег 4 х 100 м" Binding="{Binding Path=Result_44}"/>
+                        </DataGrid.Columns>
+                    </DataGrid>
+                </TabItem>
+
+                <TabItem Header="Выносливость">
+                    <DataGrid Background="#79CBEE" ItemsSource="{Binding Path=BallResultEndurance}" IsReadOnly="True" AutoGenerateColumns="False" FrozenColumnCount="1">
+                        <DataGrid.Columns>
+                            <DataGridTextColumn Header="Баллы" Binding="{Binding Path=Ball}"/>
+                            <DataGridTextColumn Header="Бег на 1 км до 35 лет" Binding="{Binding Path=Result_45_1}"/>
+                            <DataGridTextColumn Header="Бег на 1 км свышу 35 лет" Binding="{Binding Path=Result_45_2}"/>
+                            <DataGridTextColumn Header="Бег на 3 км до 35 лет" Binding="{Binding Path=Result_46_1}"/>
+                            <DataGridTextColumn Header="Бег на 1 км свыше 35 лет" Binding="{Binding Path=Result_46_2}"/>
+                            <DataGridTextColumn Header="Бег на 5 км" Binding="{Binding Path=Result_47}"/>
+                            <DataGridTextColumn Header="Марш-бросок на 5 км" Binding="{Binding Path=Result_48}"/>
+                            <DataGridTextColumn Header="Лыжная гонка на 5 км" Binding="{Binding Path=Result_53}"/>
+                            <DataGridTextColumn Header="Плавание на 500 м вольным стилем" Binding="{Binding Path=Result_57_b}"/>
+                        </DataGrid.Columns>
+                    </DataGrid>
+                </TabItem>
+
+            </TabControl>
+
+        </TabItem>
+
+        <TabItem Header="Оценка физической подготовленности">
+
+            <DataGrid  Background="#79CBEE">
+                <DataGrid.Columns >
+                    <DataGridTextColumn/>
+                </DataGrid.Columns>
+            </DataGrid>
+            
+        </TabItem>
+    </TabControl>
+   
+
+
+
+</Page>

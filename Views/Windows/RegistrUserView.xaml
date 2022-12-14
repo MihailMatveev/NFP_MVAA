@@ -1,0 +1,107 @@
+﻿<Window x:Class="TestWPF.Views.Windows.RegistrUserView"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:TestWPF.Views.Windows"
+        xmlns:fa="http://schemas.awesome.incremented/wpf/xaml/fontawesome.sharp"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="400" Width="700"
+        WindowStartupLocation="CenterOwner"
+        WindowStyle="None"
+        Background="Transparent"
+        AllowsTransparency="True">
+
+    <Border CornerRadius="10"
+            BorderThickness="1">
+        <Border.BorderBrush>
+            <LinearGradientBrush>
+                <GradientStop Color="#1E90FF" Offset="0"/>
+                <GradientStop Color="#7B68EE"  Offset="0.5"/>
+                <GradientStop Color="	#7B68EE" Offset="1"/>
+            </LinearGradientBrush>
+        </Border.BorderBrush>
+
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="250"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+
+
+            <Border Grid.Column="0"
+                    CornerRadius="10,0,0,10">
+                <Border.Background>
+                    <LinearGradientBrush StartPoint="0,0" EndPoint="1,0.7">
+                        <GradientStop Color="#0000FF"/>
+                        <GradientStop Color="#4169E1"/>
+                    </LinearGradientBrush>
+                </Border.Background>
+
+                <StackPanel Margin="5,20,5,5">
+                    <Image Source="/Logo/wr-960.jpg"/>
+                    <TextBlock Text="Михайловская военная" HorizontalAlignment="Center" FontSize="20" Foreground="White"/>
+                    <TextBlock Text="артиллерийская академия" HorizontalAlignment="Center" FontSize="20" Foreground="White"/>
+                </StackPanel>
+            </Border>
+
+
+            <Border Grid.Column="1"
+                    CornerRadius="0,10,10,0">
+                <Border.Background>
+                    <LinearGradientBrush StartPoint="1,1" EndPoint="0,0">
+                        <GradientStop Color="#5500ff"/>
+                        <GradientStop Color="#0000CD"/>
+                    </LinearGradientBrush>
+                </Border.Background>
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="35"/>
+                        <RowDefinition Height="*"/>
+                    </Grid.RowDefinitions>
+
+                    <StackPanel x:Name="pnlControlBar"
+                                Grid.Row="0"
+                                Orientation="Horizontal"
+                                FlowDirection="RightToLeft"
+                                Background="Transparent"
+                                Margin="0,0,5,0"
+                                MouseLeftButtonDown="pnlControlBar_MouseLeftButtonDown">
+                        <Button x:Name="btnExit"
+                                Command="{Binding CloseApplicationCommand}"
+                                Cursor="Hand"
+                                Style="{StaticResource Exit}">
+                            <fa:IconImage Icon="Xmark" Style="{StaticResource CloseButtonIcon}"/>
+                        </Button>
+
+                        <Button x:Name="btnMinimize"
+                                Click="btnMinimize_Click"
+                                Cursor="Hand"
+                                Style="{StaticResource Exit}">
+                            <fa:IconImage Icon="WindowMinimize" Width="12" Style="{StaticResource CloseButtonIcon}"/>
+                        </Button>
+                    </StackPanel>
+
+                    <DockPanel Grid.Row="1">
+                        <StackPanel Margin="0,70,0,0" DockPanel.Dock="Left">
+                            <Image Source="/Logo/UserProfile.png" Height="200"/>
+                        </StackPanel>
+                        <StackPanel Orientation="Vertical" DockPanel.Dock="Right">
+                            <TextBox Margin="0,130,0,0" Background="#4169E1" Text="Имя пользователя" TextAlignment="Center" Width="200"/>
+                            <TextBox  Background="#4169E1" Text="Пароль" TextAlignment="Center" Width="200"/>
+
+                            <Button Content="Войти"  Margin="8,10,40,0" Background="#4169E1" Click="Button_Click"/>
+
+                            <Button Background="Transparent" BorderBrush="Transparent" Margin="8,10,40,0">
+                                <TextBlock Text="Зарегистрироваться"/>
+                            </Button>
+                        </StackPanel>
+                    </DockPanel>
+                    
+
+                    
+                </Grid>
+            </Border>
+        </Grid>
+    </Border>
+</Window>
