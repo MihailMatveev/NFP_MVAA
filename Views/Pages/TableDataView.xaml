@@ -152,14 +152,51 @@
                     <DataGrid Background="#79CBEE" ItemsSource="{Binding Path=BallResultEndurance}" IsReadOnly="True" AutoGenerateColumns="False" FrozenColumnCount="1">
                         <DataGrid.Columns>
                             <DataGridTextColumn Header="Баллы" Binding="{Binding Path=Ball}"/>
-                            <DataGridTextColumn Header="Бег на 1 км до 35 лет" Binding="{Binding Path=Result_45_1}"/>
-                            <DataGridTextColumn Header="Бег на 1 км свышу 35 лет" Binding="{Binding Path=Result_45_2}"/>
-                            <DataGridTextColumn Header="Бег на 3 км до 35 лет" Binding="{Binding Path=Result_46_1}"/>
-                            <DataGridTextColumn Header="Бег на 1 км свыше 35 лет" Binding="{Binding Path=Result_46_2}"/>
+                            
+                            <DataGridTextColumn Binding="{Binding Path=Result_45_1}">
+                                <DataGridTextColumn.Header>
+                                    <TextBlock TextAlignment="Center">Бег на 1 км<LineBreak></LineBreak>до 35 лет</TextBlock>
+                                </DataGridTextColumn.Header>
+                            </DataGridTextColumn>
+
+                            <DataGridTextColumn Binding="{Binding Path=Result_45_2}">
+                                <DataGridTextColumn.Header>
+                                <TextBlock TextAlignment="Center">Бег на 1 км<LineBreak></LineBreak>свыше 35 лет</TextBlock>
+                            </DataGridTextColumn.Header>
+                            </DataGridTextColumn>
+
+                            <DataGridTextColumn Binding="{Binding Path=Result_46_1}">
+                                <DataGridTextColumn.Header>
+                                    <TextBlock TextAlignment="Center">Бег на 4 км<LineBreak></LineBreak>до 35 лет</TextBlock>
+                                </DataGridTextColumn.Header>
+                            </DataGridTextColumn>
+
+                            <DataGridTextColumn Binding="{Binding Path=Result_46_2}">
+                                <DataGridTextColumn.Header>
+                                    <TextBlock TextAlignment="Center">Бег на 3 км<LineBreak></LineBreak>свыше 35 лет</TextBlock>
+                                </DataGridTextColumn.Header>
+                            </DataGridTextColumn>
+
                             <DataGridTextColumn Header="Бег на 5 км" Binding="{Binding Path=Result_47}"/>
-                            <DataGridTextColumn Header="Марш-бросок на 5 км" Binding="{Binding Path=Result_48}"/>
-                            <DataGridTextColumn Header="Лыжная гонка на 5 км" Binding="{Binding Path=Result_53}"/>
-                            <DataGridTextColumn Header="Плавание на 500 м вольным стилем" Binding="{Binding Path=Result_57_b}"/>
+                            
+                            <DataGridTextColumn Binding="{Binding Path=Result_48}">
+                                <DataGridTextColumn.Header>
+                                    <TextBlock TextAlignment="Center">Марш-бросок<LineBreak></LineBreak>на 5 км</TextBlock>
+                                </DataGridTextColumn.Header>
+                            </DataGridTextColumn>
+
+                            <DataGridTextColumn Binding="{Binding Path=Result_53}">
+                                <DataGridTextColumn.Header>
+                                    <TextBlock TextAlignment="Center">Лыжная гонка<LineBreak></LineBreak>на 5 км</TextBlock>
+                                </DataGridTextColumn.Header>
+                            </DataGridTextColumn>
+
+                            <DataGridTextColumn Binding="{Binding Path=Result_57_b}">
+                            <DataGridTextColumn.Header>
+                                <TextBlock TextAlignment="Center">Плавание на 500 м<LineBreak></LineBreak>вольным стилем</TextBlock>
+                            </DataGridTextColumn.Header>
+                            </DataGridTextColumn>
+
                         </DataGrid.Columns>
                     </DataGrid>
                 </TabItem>
