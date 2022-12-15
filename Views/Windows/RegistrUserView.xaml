@@ -4,6 +4,7 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:NFP_MVAA.Views.Windows"
+        xmlns:local1="clr-namespace:NFP_MVAA.Models.Valid"
         xmlns:vm="clr-namespace:NFP_MVAA.ViewModes.Entry"
         xmlns:fa="http://schemas.awesome.incremented/wpf/xaml/fontawesome.sharp"
         mc:Ignorable="d"
@@ -109,13 +110,19 @@
                         <StackPanel Orientation="Vertical" DockPanel.Dock="Right">
 
 
-                            <TextBox ToolTip="{Binding ErrorMessege, UpdateSourceTrigger=PropertyChanged}"
-                                     Text="{Binding UserName, UpdateSourceTrigger=PropertyChanged,ValidatesOnDataErrors=True}" 
+                            <TextBox ToolTip="{Binding ErrorMessege, UpdateSourceTrigger=PropertyChanged}"  
                                      Margin="0,130,0,10" 
                                      Background="#4169E1" 
                                      TextAlignment="Center" 
                                      Width="200">
-                                
+                                <TextBox.Text>
+                                    <Binding Path="UserName" ValidatesOnDataErrors="True" UpdateSourceTrigger="PropertyChanged">
+                                        <Binding.ValidationRules>
+                                            <local1:MinCharacterRule MinCharacter="7"></local1:MinCharacterRule>
+                                        </Binding.ValidationRules>
+                                    </Binding>
+                                </TextBox.Text>
+
                             </TextBox>
 
 
