@@ -201,6 +201,7 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Models\Valid\CheckUserEntryName.cs" />
     <Compile Include="Models\Valid\MaxCharcterRule.cs" />
     <Compile Include="Models\Valid\MinCharacterRule.cs" />
     <Compile Include="ViewModes\Base\ViewModelBase.cs" />

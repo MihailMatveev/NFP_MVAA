@@ -37,7 +37,12 @@ namespace NFP_MVAA.Data
             }
         }
 
-
+        /// <summary>
+        /// проверка в БД имя и пароля пользователя, true если есть такой
+        /// </summary>
+        /// <param name="name"></param>
+        /// <param name="password"></param>
+        /// <returns></returns>
         static public bool UserEntry(string name, string password)
         {
             ConnectDate();
@@ -49,6 +54,30 @@ namespace NFP_MVAA.Data
             connection.Close();
 
             if(countUser==0)
+                return false;
+            else
+                return true;
+        }
+
+
+
+        /// <summary>
+        /// проверка в БД имя  пользователя, true если есть такой
+        /// </summary>
+        /// <param name="name"></param>
+        /// <param name="password"></param>
+        /// <returns></returns>
+        static public bool UserEntry_Name(string name)
+        {
+            ConnectDate();
+            string sqlExpression = $"SELECT * FROM [NFP].[dbo].[Users] WHERE Name='{name}'";
+
+            SqlCommand command = new SqlCommand(sqlExpression, connection);
+
+            int countUser = Convert.ToInt32(command.ExecuteScalar());
+            connection.Close();
+
+            if (countUser == 0)
                 return false;
             else
                 return true;
