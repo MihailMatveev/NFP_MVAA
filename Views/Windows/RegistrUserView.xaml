@@ -119,6 +119,7 @@
                                     <Binding Path="UserName" ValidatesOnDataErrors="True" UpdateSourceTrigger="PropertyChanged">
                                         <Binding.ValidationRules>
                                             <local1:MinCharacterRule MinCharacter="7"></local1:MinCharacterRule>
+                                            <local1:MaxCharcterRule MaxCharacter="30"></local1:MaxCharcterRule>
                                         </Binding.ValidationRules>
                                     </Binding>
                                 </TextBox.Text>

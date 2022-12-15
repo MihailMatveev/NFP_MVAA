@@ -227,7 +227,6 @@ namespace NFP_MVAA.Data
             {
                 while (reader.Read())
                 {
-                    int i = 0;
                     ball_result.Add(new BallResultExercisesEndurance()
                     {
                         Ball =(int)reader["Ball"],
