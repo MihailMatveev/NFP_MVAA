@@ -30,23 +30,106 @@
                 <TabItem Header="Сила">
                     <DataGrid Background="#79CBEE" ItemsSource="{Binding Path=BallResultForce}" IsReadOnly="True" AutoGenerateColumns="False" FrozenColumnCount="1">
                         <DataGrid.Columns>
+                            
                             <DataGridTextColumn Header="Баллы" Binding="{Binding Path=Ball}"/>
-                            <DataGridTextColumn Header="Подтягивание на перекладине" Binding="{Binding Path=Result_4}"/>
-                            <DataGridTextColumn Header="Подъем переворотом на перекладине" Binding="{Binding Path=Result_6}"/>
-                            <DataGridTextColumn Header="Сгибание и разгибание рук в упоре лежа" Binding="{Binding Path=Result_1}"/>
-                            <DataGridTextColumn Header="Наклоны туловища вперед" Binding="{Binding Path=Result_2}"/>
-                            <DataGridTextColumn Header="Поднимание ног к перекладине" Binding="{Binding Path=Result_5}"/>
-                            <DataGridTextColumn Header="Подъем силой на перкладине" Binding="{Binding Path=Result_7}"/>
-                            <DataGridTextColumn Header="Жим штанги лежа до 70 кг" Binding="{Binding Path=Result_8_1}"/>
-                            <DataGridTextColumn Header="Жим штанги лежа свышу 70 кг" Binding="{Binding Path=Result_8_2}"/>
-                            <DataGridTextColumn Header="Сгибание и разгибание рук в упоре на брусьях" Binding="{Binding Path=Result_9}"/>
-                            <DataGridTextColumn Header="Угол в упоре на брусьях" Binding="{Binding Path=Result_10}"/>
-                            <DataGridTextColumn Header="Рывок гири, вес 24 кг до 70 кг" Binding="{Binding Path=Result_11_1}"/>
-                            <DataGridTextColumn Header="Рывок гири, вес 24 кг свыше 70 кг" Binding="{Binding Path=Result_11_2}"/>
-                            <DataGridTextColumn Header="Толчок двух гирь,вес 24 кг до 70 кг" Binding="{Binding Path=Result_12_1}"/>
-                            <DataGridTextColumn Header="Толчок двух гирь,вес 24 кг свыше 70 кг" Binding="{Binding Path=Result_12_2}"/>
-                            <DataGridTextColumn Header="Толчок двух гирь по длинному циклу, вес 24 кг до 70 кг" Binding="{Binding Path=Result_13_1}"/>
-                            <DataGridTextColumn Header="Толчок двух гирь по длинному циклу, вес 24 кг свыше 70 кг" Binding="{Binding Path=Result_13_2}"/>
+
+                            <DataGridTextColumn Binding="{Binding Path=Result_4}">
+                                <DataGridTextColumn.Header>
+                                    <TextBlock TextAlignment="Center">Подтягивание <LineBreak></LineBreak>на перекладине</TextBlock>
+                                </DataGridTextColumn.Header>
+                            </DataGridTextColumn>
+
+                            <DataGridTextColumn Binding="{Binding Path=Result_6}">
+                                <DataGridTextColumn.Header>
+                                    <TextBlock TextAlignment="Center">Подъем переворотом <LineBreak></LineBreak>на перекладине</TextBlock>
+                                </DataGridTextColumn.Header>
+                            </DataGridTextColumn>
+
+
+                            <DataGridTextColumn Binding="{Binding Path=Result_1}">
+                            <DataGridTextColumn.Header>
+                                    <TextBlock TextAlignment="Center">Сгибание и разгибание рук <LineBreak></LineBreak>в упоре лежа</TextBlock>
+                            </DataGridTextColumn.Header>
+                            </DataGridTextColumn>
+
+                            <DataGridTextColumn Binding="{Binding Path=Result_2}">
+                                <DataGridTextColumn.Header>
+                                    <TextBlock TextAlignment="Center">Наклоны туловища<LineBreak></LineBreak>вперед</TextBlock>
+                                </DataGridTextColumn.Header>
+                            </DataGridTextColumn>
+
+                            <DataGridTextColumn Binding="{Binding Path=Result_5}">
+                                <DataGridTextColumn.Header>
+                                    <TextBlock TextAlignment="Center">Поднимание ног<LineBreak></LineBreak>к перекладине</TextBlock>
+                                </DataGridTextColumn.Header>
+                            </DataGridTextColumn>
+
+                            <DataGridTextColumn Binding="{Binding Path=Result_7}">
+                            <DataGridTextColumn.Header>
+                                    <TextBlock TextAlignment="Center">Подъем силой<LineBreak></LineBreak>на перекладине</TextBlock>
+                            </DataGridTextColumn.Header>
+                            </DataGridTextColumn>
+
+                            <DataGridTextColumn Binding="{Binding Path=Result_8_1}">
+                                <DataGridTextColumn.Header>
+                                    <TextBlock TextAlignment="Center">Жим штанги лежа<LineBreak></LineBreak>до 70 кг</TextBlock>
+                                </DataGridTextColumn.Header>
+                            </DataGridTextColumn>
+
+                            <DataGridTextColumn Binding="{Binding Path=Result_8_2}">
+                            <DataGridTextColumn.Header>
+                                <TextBlock TextAlignment="Center">Жим штанги лежа<LineBreak></LineBreak>свыше 70 кг</TextBlock>
+                            </DataGridTextColumn.Header>
+                            </DataGridTextColumn>
+
+                            <DataGridTextColumn Binding="{Binding Path=Result_9}">
+                            <DataGridTextColumn.Header>
+                                    <TextBlock TextAlignment="Center">Сгибание и разгибание рук<LineBreak></LineBreak>в упоре на брусьях</TextBlock>
+                            </DataGridTextColumn.Header>
+                            </DataGridTextColumn>
+
+                            <DataGridTextColumn Binding="{Binding Path=Result_10}">
+                            <DataGridTextColumn.Header>
+                                    <TextBlock TextAlignment="Center">Угол в упоре<LineBreak></LineBreak>на брусьях</TextBlock>
+                            </DataGridTextColumn.Header>
+                            </DataGridTextColumn>
+
+                            <DataGridTextColumn Binding="{Binding Path=Result_11_1}">
+                            <DataGridTextColumn.Header>
+                                    <TextBlock TextAlignment="Center">Рывок гири, вес 24 кг<LineBreak></LineBreak>до 70 кг</TextBlock>
+                            </DataGridTextColumn.Header>
+                            </DataGridTextColumn>
+
+                            <DataGridTextColumn Binding="{Binding Path=Result_11_2}">
+                            <DataGridTextColumn.Header>
+                                <TextBlock TextAlignment="Center">Рывок гири, вес 24 кг<LineBreak></LineBreak>свыше 70 кг</TextBlock>
+                            </DataGridTextColumn.Header>
+                            </DataGridTextColumn>
+
+                            <DataGridTextColumn Binding="{Binding Path=Result_12_1}">
+                                <DataGridTextColumn.Header>
+                                    <TextBlock TextAlignment="Center">Толчок двух гирь,вес 24 кг<LineBreak></LineBreak>до 70 кг</TextBlock>
+                                </DataGridTextColumn.Header>
+                            </DataGridTextColumn>
+
+                            <DataGridTextColumn Binding="{Binding Path=Result_12_2}">
+                                <DataGridTextColumn.Header>
+                                    <TextBlock TextAlignment="Center">Толчок двух гирь,вес 24 кг<LineBreak></LineBreak>свыше 70 кг</TextBlock>
+                                </DataGridTextColumn.Header>
+                            </DataGridTextColumn>
+
+                            <DataGridTextColumn Binding="{Binding Path=Result_13_1}">
+                                <DataGridTextColumn.Header>
+                                    <TextBlock TextAlignment="Center">Толчок двух гирь по длинному циклу,<LineBreak></LineBreak>вес 24 кг до 70 кг</TextBlock>
+                                </DataGridTextColumn.Header>
+                            </DataGridTextColumn>
+                                
+                            <DataGridTextColumn Binding="{Binding Path=Result_13_2}">
+                                <DataGridTextColumn.Header>
+                                    <TextBlock TextAlignment="Center">Толчок двух гирь по длинному циклу,<LineBreak></LineBreak>вес 24 кг свыше 70 кг</TextBlock>
+                                </DataGridTextColumn.Header>
+                            </DataGridTextColumn>
+                            
                         </DataGrid.Columns>
                     </DataGrid>
 
